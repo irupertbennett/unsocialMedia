@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './navbar/navbar'
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import SignUp from './Auth/signup';
+import Profile from './profile/profile';
+import SignIn from './Auth/signin';
+import ForgottenPassword from './Auth/forgottenpassword'
+import Forum from './forum/Forum';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          <Navbar/>
+        </header>
+        <Switch>
+          <Route exact path='/'>
+            <SignIn/>
+          </Route>
+          <Route path='/account'>
+            <Profile/>
+          </Route>
+          <Route path='/register'>
+            <SignUp/>
+          </Route>
+          <Route path='/signIn'>
+            <SignIn/>
+          </Route>
+          <Route path='/resetPassword'>
+            <ForgottenPassword/>
+          </Route>
+          <Route exact path='/forum'>
+            <Forum/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

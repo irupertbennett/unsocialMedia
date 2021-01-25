@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+nav{
+  background-color: #03a07b;
+}
+
+.nav-link{
+  color: white;
+}
+
+body{
+  background-color: #cee8e4;
+}
+
+.profile-card {
+   background-color: grey;
+  /* background-image: url("/src/Images/Image_placeholder_1920_650_old.jpg") ; */
+}
+
+.user-info{
+  background-color: #03a07b;
+  height: 350px;
+}
+
+.create-post{
+  background-color: #03a07b;
+  height: 350px;
+}
+
+.profile-intro{
+  background-color: #03a07b;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border-top: none;
+}
+
+.card-footer > p {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.reaction-icon:hover{
+  transform: scale(1.2, 1.2);
+}
